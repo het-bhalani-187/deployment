@@ -1,0 +1,93 @@
+.blog-detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.blog-header h1 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.blog-content {
+  line-height: 1.8;
+  color: #444;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.edit-button,
+.delete-button,
+.back-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.edit-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #6c757d;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.error-message {
+  padding: 1rem;
+  background-color: #fee;
+  color: #c00;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}

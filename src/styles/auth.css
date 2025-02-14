@@ -1,0 +1,149 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), 
+                radial-gradient(circle at 30% 30%, rgba(128, 128, 128, 0.5), transparent 50%), 
+                radial-gradient(circle at 70% 70%, rgba(0, 0, 0, 0.5), transparent 50%);
+    background-blend-mode: overlay; /* Optional: blend the gradients */
+    background-position: center; /* Center the background */
+    background-size: cover; /* Cover the entire area */
+    border-radius: 10px;
+  padding: 20px;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.auth-logo {
+  display: block;
+  margin: 0 auto 30px;
+  max-width: 150px;
+  height: auto;
+}
+
+.auth-box h2 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1e3c72;
+  outline: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+  background: #2a5298;
+}
+
+.auth-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-link a {
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+.verification-instructions {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.verification-instructions p {
+  margin-bottom: 10px;
+}
+
+.message {
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.message.pending {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.message.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Role-specific styling */
+.form-group.role-specific {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.role-specific-title {
+  color: #1e3c72;
+  font-weight: 600;
+  margin-bottom: 15px;
+}

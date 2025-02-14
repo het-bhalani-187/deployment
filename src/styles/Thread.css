@@ -1,0 +1,284 @@
+/* Main Thread Background */
+.thread-background {
+  min-height: 100vh; /* Ensure the background covers the full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-size: 200% 200%; /* For background animation */
+  animation: gradientShift 5s ease infinite;
+  font-family: Arial, sans-serif; /* Improved readability */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Section for Posting a Thread */
+.add-thread {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  margin: 0 0 15px;
+  font-size: 24px;
+  color: #333333;
+}
+
+/* Comment Input Box */
+.comment-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.comment-input button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.comment-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Search Bar for Filtering Threads */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
+  font-size: 14px;
+}
+
+/* Add Thread Container */
+.add-thread-container {
+  width: 100%;
+  max-width: 800px; /* Limit the width for better readability */
+}
+
+/* Threads Container */
+.thread-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Comment Styling */
+.comment {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative; /* For reply ownership */
+}
+
+.comment[data-user="current-user"] {
+  border-left: 5px solid #007bff; /* Highlight for the current user */
+}
+
+.comment-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: flex-start; /* Align everything to the left */
+}
+
+.comment-text strong {
+  color: grey; /* Grey color for User ID */
+  margin-right: 10px; /* Space between User ID and the rest of the text */
+}
+
+.reply-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.reply-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.reply-input button {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.reply-input button:hover {
+  background-color: #218838;
+}
+
+/* Replies Container */
+.replies {
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #007bff;
+}
+
+/* Reply Styling */
+.reply {
+  background-color: #e9ecef;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative; /* For ownership indicators */
+}
+
+.reply[data-owner="current-user"] {
+  border-left: 4px solid #ffc107; /* Highlight replies by the user */
+}
+
+.reply.pinned {
+  border-left: 4px solid #ffc107;
+}
+
+.reply-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: flex-start; /* Align everything to the left */
+}
+
+.reply-text strong {
+  color: grey; /* Grey color for User ID */
+  margin-right: 10px; /* Space between User ID and the rest of the text */
+}
+
+.reply-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reply-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 12px;
+}
+
+.reply-actions button:hover {
+  text-decoration: underline;
+}
+
+.reply-timestamp {
+  font-size: 12px;
+  color: gray;
+  margin-left: 10px;
+}
+
+.toggle-replies {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.toggle-replies:hover {
+  text-decoration: underline;
+}
+
+/* Comment Options Styling */
+.comment-options {
+  position: relative;
+  display: inline-block;
+}
+
+/* Ellipsis Button */
+.ellipsis-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  font-size: 24px; /* Adjust size as needed */
+  color: #333; /* Change color as needed */
+  padding: 0;
+}
+
+/* Options Dropdown */
+.options-dropdown {
+  display: block; /* Always show the dropdown */
+  position: absolute;
+  right: 0; /* Align to the right */
+  background-color: white; /* Background color of the dropdown */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+  z-index: 1; /* Ensure it appears above other elements */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.options-dropdown button {
+  display: block; /* Stack buttons vertically */
+  padding: 8px 12px; /* Padding for buttons */
+  border: none; /* Remove border */
+  background: none; /* No background */
+  color: #333; /* Text color */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Full width */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 14px;
+}
+
+.options-dropdown button:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}
+
+/* Styling for the User ID and Text */
+.reply-owner,
+.comment-owner {
+  font-size: 12px;
+  color: #555;
+  padding-left: 0; /* Adjust for left alignment */
+}
+
+/* For reply input with message display */
+.reply-text {
+  margin-bottom: 5px;
+}
+
+.comment-text {
+  margin-bottom: 5px;
+}

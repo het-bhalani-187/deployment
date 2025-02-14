@@ -1,0 +1,341 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ffffff, #f8f9fa); /* Soft gradient */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: background 3s ease; /* Smooth background animation */
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #f8f9fa, #ffffff); /* Reverse gradient on hover */
+}
+
+.logo {
+  height: 50px;
+  margin-right: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Scaling and glow */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.2)); /* Subtle glow effect */
+}
+
+.navListLeft,
+.navListRight {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000; /* Black text */
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 10px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow for hover */
+  position: relative;
+  overflow: hidden; /* For ripple effect */
+  cursor: pointer;
+}
+
+.navLink:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: #fff; /* White text on hover */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Glow shadow */
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 123, 255, 0.2); /* Ripple effect color */
+  border-radius: 50%;
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.navLink:hover::after {
+  transform: translate(-50%, -50%) scale(1); /* Ripple animation */
+}
+
+.profileIcon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #000; /* Black icon */
+  background-color: transparent;
+  border: none;
+  transition: color 0.3s ease, filter 0.3s ease; /* Smooth color and glow */
+}
+
+.profileIcon:hover {
+  color: #007bff; /* Blue color on hover */
+  filter: drop-shadow(0 0 8px rgba(0, 123, 255, 0.5)); /* Subtle glow effect */
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd; /* Light border */
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth scale and fade */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.navItem:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.dropdownLink {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000; /* Black text */
+  display: block;
+  padding: 10px;
+  border-radius: 8px; /* Rounded links */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownLink:hover {
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff; /* White background */
+  border-radius: 8px;
+  box-shadow: 20px rgba(0, 0, 0, 0.904); /* Soft shadow */
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navItem:hover .dropdownMenu {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.dropdownItem {
+  display: block;
+  padding: 10px 15px;
+  color: #000; /* Black text */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added scaling */
+}
+
+.dropdownItem:hover {
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  transform: translateX(5px); /* Slide effect */
+}
+
+.navbar {
+  background-color: #000000;
+  padding: 1rem 2rem;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.navbar-toggle-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+}
+
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle-icon::before {
+  top: -8px;
+}
+
+.navbar-toggle-icon::after {
+  bottom: -8px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-item {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.navbar-item:hover {
+  color: #007bff;
+  background-color: #f8f9fa;
+}
+
+/* Profile Menu Styles */
+.profile-menu-container {
+  position: relative;
+}
+
+.profile-menu-button {
+  background: none;
+  border: none;
+  font-size: large;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-menu-arrow {
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.profile-menu-button:hover {
+  color: #007bff;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.dropdown-item.delete-account {
+  color: #dc3545;
+  border-top: 1px solid #eee;
+}
+
+.dropdown-item.delete-account:hover {
+  background-color: #fee;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.is-open {
+    display: flex;
+  }
+
+  .profile-dropdown {
+    position: static;
+    box-shadow: none;
+    margin-top: 0;
+    border-top: 1px solid #eee;
+  }
+
+  .navbar-item,
+  .profile-menu-button {
+    width: 100%;
+    text-align: left;
+  }
+}

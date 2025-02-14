@@ -1,0 +1,82 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0; /* Remove default margin */
+  height: 80%; /* Ensure the body takes full height */
+}
+
+.gradient-bg {
+    height: 100vh; /* Full height for demonstration */
+    background: 
+      radial-gradient( rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), 
+      radial-gradient(rgba(128, 128, 128, 0.5), transparent 50%), 
+      radial-gradient(rgba(0, 0, 0, 0.5), transparent 50%);
+    background-blend-mode: overlay; /* Optional: blend the gradients */
+  background-position: center; /* Center the background */
+  background-size: cover; /* Cover the entire area */
+}
+.gradient-bg2 {
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%), 
+              radial-gradient(circle at 30% 30%, rgba(0, 0, 255, 0.5), transparent 50%), 
+              radial-gradient(circle at 70% 70%, rgba(255, 0, 0, 0.5), transparent 50%);
+  background-position: center; /* Center the background */
+  background-size: cover; /* Cover the entire area */
+}
+.Home-bg{
+  height: 87vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.min-h-screen {
+  min-height: 100vh; /* Full height for flex container */
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-blue-500 {
+  border-color: #3b82f6; /* Tailwind blue-500 */
+}
+
+.p-10 {
+  padding: 2.5rem; /* Tailwind p-10 */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Tailwind text-sm */
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* Tailwind text-4xl */
+}
+
+.font-bold {
+  font-weight: 700; /* Tailwind font-bold */
+}
+
+.mt-2 {
+  margin-top: 0.5rem; /* Tailwind mt-2 */
+}
+
+.text-blue-900 {
+  color: #1e3a8a; /* Tailwind blue-900 */
+}
